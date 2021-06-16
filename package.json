@@ -1,0 +1,29 @@
+{
+  "name": "simple-3d",
+  "version": "0.1.0",
+  "description": "Simple 3d lib",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SoNiceElijah/node-simple-3d.git"
+  },
+  "keywords": [
+    "3d",
+    "ray-tracing"
+  ],
+  "author": "soniceelijah",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SoNiceElijah/node-simple-3d/issues"
+  },
+  "homepage": "https://github.com/SoNiceElijah/node-simple-3d#readme",
+  "dependencies": {
+    "canvas": "^2.8.0"
+  }
+}
