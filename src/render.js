@@ -10,19 +10,27 @@ const scene = [{
     ...objs.sphere
 }];
 
-function generate(w,h)
+function generate(window,screen,orig,focus,up,right,forward)
 {
-    let ws = 2.0 / w;
-    let hs = 2.0 / h;
+    let dw = window[0] / screen[0];
+    let dh = window[1] / screen[1];
 
-    let orig = [0,0,0];
-    let F = [1,0,0];
-
-    for(let i = 0; i < w; ++i)
+    for(let i = -window[0] / 2; i < window[0] / 2; i += dw)
     {
-        for(let j = 0; j < h; ++j)
+        for(let j = -window[1] / 2; j < window[1] / 2; j += dh)
         {
-            let dir =   
+            let f = vamth.vec.scale(focus,forward);
+            let r = vamth.vec.scale(i,right);
+            let u = vamth.vec.scale(j,up);
+
+            let dir = vamth.vec.norm(
+                vamth.vec.add(
+                    vamth.vec.add(orig,f),
+                    vamth.vec.add(r,u),
+                )
+            );
+
+            
         }
     }
 
